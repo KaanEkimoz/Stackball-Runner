@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7276634682108533601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7276634682108533599}
+  - component: {fileID: 7276634682108533600}
+  m_Layer: 0
+  m_Name: LevelSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7276634682108533599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276634682108533601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7276634682108533600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7276634682108533601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf731004f5d0eaa41a9999813e952a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model:
+  - {fileID: 4083092216702661192, guid: 4090eb26e9a6243499e279e647626f17, type: 3}
+  - {fileID: 992441524142787588, guid: b44c72689c6c52746828431f75d73de2, type: 3}
+  - {fileID: 4539803227491765944, guid: 1674bc274f44df040966bd1fae819284, type: 3}
+  - {fileID: 8528561060963508861, guid: b638a53507c223a4b858a04f2b88a7ee, type: 3}
+  - {fileID: 225655592731744939, guid: d75157de4e152e94ebe7de9269282390, type: 3}
+  - {fileID: 5960452819303886218, guid: 75a7b640ecdea8b47b9478ae5d40ef62, type: 3}
+  - {fileID: 4548157771204349848, guid: c1d4c2c2b53e90445b35d21db01db8ef, type: 3}
+  - {fileID: 6286621851328594392, guid: 2a0ced72320b74f43bdfb9573124c98f, type: 3}
+  - {fileID: 2485192568765388156, guid: 90228dd910939c444b7850a039c6dcec, type: 3}
+  - {fileID: 7745127372838717392, guid: 5927dd5a5f5c301469062c1dbce3bc35, type: 3}
+  - {fileID: 4264818134659908630, guid: 9d427f0c0970b5d428dfcaed09468ee2, type: 3}
+  - {fileID: 3415692751773836768, guid: 0a876d26f30a5584282e9dadeb55635a, type: 3}
+  - {fileID: 6320859594895252874, guid: 23d3fdaf8929ba6469884ec590fdcc44, type: 3}
+  - {fileID: 8777489252609733739, guid: 5e6e0836b9ff3c34bb52a6099d976936, type: 3}
+  - {fileID: 2164004763277300209, guid: 0a5c53c4b322ad64989177877c01512b, type: 3}
+  - {fileID: 6920255094323088728, guid: 45850b997f66d7f4ab285a00b53bfe48, type: 3}
+  - {fileID: 1033941883887439971, guid: 99e26c94b59ea6446ab2abd5b7740396, type: 3}
+  - {fileID: 8173515656159446429, guid: cb7796d3fb1d2ec409be45da689ed427, type: 3}
+  - {fileID: 4443300921571106005, guid: f2f4592453b666041979e5c5985244af, type: 3}
+  - {fileID: 7491820912803991582, guid: 13c675376bea900468cb73697e203899, type: 3}
+  modelPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  winPrefab: {fileID: 3293644397374515874, guid: de014377afc97fb458185f5869ca0bd9, type: 3}
+  level: 1
+  addOn: 7
+  plateMat: {fileID: 2100000, guid: 08ba0d951780d1d4c927e110c9d952d2, type: 2}
+  baseMat: {fileID: 2100000, guid: e3bd4246a16cd5c49968223f6e8f335f, type: 2}
+  playerMesh: {fileID: 0}
