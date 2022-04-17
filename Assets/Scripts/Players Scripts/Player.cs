@@ -6,17 +6,13 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     private Rigidbody rb;
-
     private float currentTime;
-
     private bool smash, invincible;
-
     private int currentBrokenStacks, totalStacks;
 
     public GameObject invicnbleObj;
     public Image invincibleFill;
     public GameObject fireEffect, winEffect, splashEffect;
-    
     public enum PlayerState
     {
         Prepare,
@@ -25,7 +21,7 @@ public class Player : MonoBehaviour
         Finish
     }
 
-    [HideInInspector]
+    //[HideInInspector]
     public PlayerState playerState = PlayerState.Prepare;
 
     public AudioClip bounceOffClip, deadClip, winClip, destoryClip, iDestroyClip;
@@ -188,6 +184,11 @@ public class Player : MonoBehaviour
             win.transform.SetParent(Camera.main.transform);
             win.transform.localPosition = Vector3.up * 1.5f;
             win.transform.eulerAngles = Vector3.zero;
+        }
+
+        if (target.gameObject.tag == "Platform" && playerState == PlayerState.Playing)
+        {
+            playerState = PlayerState.Prepare;
         }
     }
 

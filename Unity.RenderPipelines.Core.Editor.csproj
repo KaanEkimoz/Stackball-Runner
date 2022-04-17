@@ -27,7 +27,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_32;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_32;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
@@ -52,68 +52,68 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Context.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\CameraState.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Utilities\EditorMaterialQuality.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\DisplayWindow.EnvironmentLibrarySidePanel.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ShaderGenerator\ShaderTypeGeneration.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\EnvironmentLibrary.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugUIDrawer.Builtins.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugUIDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\LookDevRenderer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\SpeedTree8MaterialUpgrader.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ExpandedState.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\SerializedDataParameter.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\LookDev.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\Drawers\IntParameterDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\CoreEditorUtils.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\CoreEditorDrawers.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Gizmo\HierarchicalBox.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\CoreLightEditorUtilities.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\MaterialUpgrader.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugWindow.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ShaderGenerator\ShaderGeneratorMenu.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESObject.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\DropArea.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESReader.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESImporterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\Drawers\FloatParameterDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\RenderGraph\RenderGraphViewer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESImporterEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\PropertyFetcher.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\Drawers\Vector4ParameterDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Stage.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ProjectorEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Compositor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeComponentEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeComponentListEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\InspectorCurveEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESImporter.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\DisplayWindow.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\QuaternionPropertyDrawer.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugUIHandlerCanvasEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeProfileEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\ToolbarRadio.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\DisplayWindow.DebugSidePanel.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Environment.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugState.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\FilterWindow.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\UIFoldoutEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\ComparisonGizmoController.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESEngine.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\Drawers\ColorParameterDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Utilities\SerializedBitArray.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeProfileFactory.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\CameraController.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeMenuItems.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ContextualMenuDispatcher.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeParameterDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ShaderGenerator\CSharpToHLSL.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\EditorPrefBoolFlags.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\ComparisonGizmoState.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\CoreEditorStyles.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeComponentProvider.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Gizmo\HierarchicalSphere.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Context.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\CameraState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ShaderGenerator\ShaderTypeGeneration.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\EnvironmentLibrary.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugUIDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\LookDevRenderer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\SpeedTree8MaterialUpgrader.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ExpandedState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\CoreEditorDrawers.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Gizmo\HierarchicalBox.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\MaterialUpgrader.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugWindow.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Lighting\IESReader.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\PropertyFetcher.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\ProjectorEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Compositor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\QuaternionPropertyDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugUIHandlerCanvasEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\ToolbarRadio.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\DisplayWindow.DebugSidePanel.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\DebugState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\FilterWindow.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Debugging\UIFoldoutEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\Drawers\ColorParameterDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeProfileFactory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\CameraController.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\Volume\VolumeMenuItems.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\EditorPrefBoolFlags.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\CameraEditorUtils.cs" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\CubeToLatlong.shader" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@10.8.1\Editor\LookDev\Compositor.shader" />

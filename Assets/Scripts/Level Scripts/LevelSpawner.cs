@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelSpawner : MonoBehaviour
 {
-
+    private Rotator[] rotators;
+    private int height;
     public GameObject[] model;
     [HideInInspector]
     public GameObject[] modelPrefab = new GameObject[4];
@@ -19,51 +20,79 @@ public class LevelSpawner : MonoBehaviour
     public Material plateMat, baseMat;
     public MeshRenderer playerMesh;
 
+    private Vector3 Pos
+    {
+        get => transform.position;
+        set => transform.position = value;
+    }
+
     void Awake()
     {
-        plateMat.color = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
-        baseMat.color = plateMat.color + Color.gray;
-        playerMesh.material.color = plateMat.color;
-
-        level = PlayerPrefs.GetInt("Level", 1);
-
-        if (level > 9)
-            addOn = 0;
-
-        ModelSelection();
-        float random = Random.value;
-        for (i = 0; i > -level - addOn; i -= 0.5f)
+        rotators = FindObjectsOfType<Rotator>();
+        for (int x = 0; x < rotators.Length; x++)
         {
-            if (level <= 20)
-                temp1 = Instantiate(modelPrefab[Random.Range(0, 2)]);
-            if(level > 20 && level <= 50)
-                temp1 = Instantiate(modelPrefab[Random.Range(1, 3)]);
-            if(level > 50 && level <= 100)
-                temp1 = Instantiate(modelPrefab[Random.Range(2, 4)]);
-            if(level > 100)
-                temp1 = Instantiate(modelPrefab[Random.Range(3, 4)]);
+            plateMat.color = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
+            baseMat.color = plateMat.color + Color.gray;
+            playerMesh.material.color = plateMat.color;
+        
 
-            temp1.transform.position = new Vector3(0, i - 0.01f, 0);
-            temp1.transform.eulerAngles = new Vector3(0, i * 8, 0);
+            level = PlayerPrefs.GetInt("Level", 1);
 
-            if(Mathf.Abs(i) >= level * .3f && Mathf.Abs(i) <= level * .6f)
+            if (level > 9)
+                addOn = 0;
+
+            ModelSelection();
+            float random = Random.value;
+
+            if (rotators[x].setHeightManual)
             {
-                temp1.transform.eulerAngles = new Vector3(0, i * 8, 0);
-                temp1.transform.eulerAngles += Vector3.up * 180;
-            }else if(Mathf.Abs(i) >= level * .8f)
+                height = rotators[x].height / -2;
+            }
+            else
             {
+                height = -level - addOn;
+            }
+            
+            for (i = 0; i > height; i -= 0.5f)
+            {
+                if (level <= 20)
+                    temp1 = Instantiate(modelPrefab[Random.Range(0, 2)]);
+                if(level > 20 && level <= 50)
+                    temp1 = Instantiate(modelPrefab[Random.Range(1, 3)]);
+                if(level > 50 && level <= 100)
+                    temp1 = Instantiate(modelPrefab[Random.Range(2, 4)]);
+                if(level > 100)
+                    temp1 = Instantiate(modelPrefab[Random.Range(3, 4)]);
+
+                temp1.transform.position = new Vector3(rotators[x].transform.position.x, rotators[x].transform.position.y + i - 0.01f, rotators[x].transform.position.z);
                 temp1.transform.eulerAngles = new Vector3(0, i * 8, 0);
 
-                if(random > .75f)
+                if(Mathf.Abs(i) >= level * .3f && Mathf.Abs(i) <= level * .6f)
+                {
+                    temp1.transform.eulerAngles = new Vector3(0, i * 8, 0);
                     temp1.transform.eulerAngles += Vector3.up * 180;
+                }else if(Mathf.Abs(i) >= level * .8f)
+                {
+                    temp1.transform.eulerAngles = new Vector3(0, i * 8, 0);
+
+                    if(random > .75f)
+                        temp1.transform.eulerAngles += Vector3.up * 180;
+                }
+
+                temp1.transform.parent = rotators[x].transform;
+
             }
 
-            temp1.transform.parent = FindObjectOfType<Rotator>().transform;
-
+            if (rotators[x].finishRotator)
+            {
+                temp2 = Instantiate(winPrefab);
+                temp2.transform.position = new Vector3(rotators[x].transform.position.x, rotators[x].transform.position.y  + i - 0.01f, rotators[x].transform.position.z);
+            }
+        
+            
         }
-
-        temp2 = Instantiate(winPrefab);
-        temp2.transform.position = new Vector3(0, i - 0.01f, 0);
+        
+        
     }
 
     private void Update()
