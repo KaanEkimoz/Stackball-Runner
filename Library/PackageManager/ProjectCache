@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637857964440027343
-    m_Hash: 352282897
+      ticks: 637879406796383038
+    m_Hash: 1033782830
   m_LockFileStatus:
     m_FilePath: C:/Users/yuusu/Desktop/208Studios/StackBallRunner/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637857964440177127
-    m_Hash: 3610677847
+      ticks: 637879406991446786
+    m_Hash: 178604483
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -179,12 +179,12 @@ m_PackageAssets:
         url: https://github.com/Unity-Technologies/com.unity.cinemachine.git
         revision: 0eef4802dbe9ea60fc58767471ce4c5ea86632de
         path: 
-    - packageId: com.unity.collab-proxy@1.15.13
+    - packageId: com.unity.collab-proxy@1.15.16
       testable: 0
       isDirectDependency: 1
-      version: 1.15.13
+      version: 1.15.16
       source: 1
-      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.collab-proxy@1.15.13
+      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.collab-proxy@1.15.16
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -237,6 +237,7 @@ m_PackageAssets:
         - 1.14.13
         - 1.14.15
         - 1.14.16
+        - 1.14.17
         - 1.15.1
         - 1.15.4
         - 1.15.7
@@ -245,6 +246,7 @@ m_PackageAssets:
         - 1.15.13
         - 1.15.15
         - 1.15.16
+        - 1.15.17
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -256,9 +258,8 @@ m_PackageAssets:
         - 2.1.0-preview.5
         - 2.1.0-preview.6
         compatible:
-        - 1.15.13
-        - 1.15.15
         - 1.15.16
+        - 1.15.17
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -269,7 +270,7 @@ m_PackageAssets:
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
-        verified: 1.15.16
+        verified: 1.15.17
       dependencies:
       - name: com.unity.services.core
         version: 1.0.1
@@ -304,13 +305,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637807003040000000
+      datePublishedTicks: 637847776260000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-        revision: 825774911ad2d1440ac844c9be1ae2c9b5dc7966
+        revision: 714a2838c2d55add3d0accf539488f96caa757b2
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -363,6 +364,7 @@ m_PackageAssets:
         - 3.0.10
         - 3.0.12
         - 3.0.13
+        - 3.0.14
         compatible:
         - 1.0.2
         - 1.0.6
@@ -393,6 +395,7 @@ m_PackageAssets:
         - 3.0.10
         - 3.0.12
         - 3.0.13
+        - 3.0.14
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -723,12 +726,127 @@ m_PackageAssets:
         url: https://github.com/Unity-Technologies/InputSystem.git
         revision: 76d3fd182183dff9e9793431de614fd1e69e363c
         path: 
-    - packageId: com.unity.render-pipelines.universal@10.8.1
+    - packageId: com.unity.recorder@2.5.7
       testable: 0
       isDirectDependency: 1
-      version: 10.8.1
+      version: 2.5.7
       source: 1
-      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1
+      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.recorder@2.5.7
+      assetPath: Packages/com.unity.recorder
+      name: com.unity.recorder
+      displayName: Unity Recorder
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'The Unity Recorder allows you to capture and save data from the
+        Unity Editor during Play Mode: animations, videos, images, audio, and more.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.0.0-preview.6
+        - 2.0.1-preview.1
+        - 2.0.2-preview.3
+        - 2.0.3-preview.1
+        - 2.1.0-preview.1
+        - 2.2.0-preview.4
+        - 2.3.0-preview.3
+        - 2.4.0-preview.1
+        - 2.5.0-pre.1
+        - 2.5.2
+        - 2.5.4
+        - 2.5.5
+        - 2.5.7
+        - 2.6.0-exp.3
+        - 2.6.0-exp.4
+        - 3.0.0-pre.1
+        - 3.0.0-pre.2
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 4.0.0-pre.1
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        - 4.0.0-pre.4
+        compatible:
+        - 2.0.0-preview.6
+        - 2.0.1-preview.1
+        - 2.0.2-preview.3
+        - 2.0.3-preview.1
+        - 2.1.0-preview.1
+        - 2.2.0-preview.4
+        - 2.3.0-preview.3
+        - 2.4.0-preview.1
+        - 2.5.0-pre.1
+        - 2.5.2
+        - 2.5.4
+        - 2.5.5
+        - 2.5.7
+        - 2.6.0-exp.3
+        - 2.6.0-exp.4
+        - 3.0.0-pre.1
+        - 3.0.0-pre.2
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 4.0.0-pre.1
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        verified: 2.5.7
+      dependencies:
+      - name: com.unity.timeline
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.timeline
+        version: 1.4.8
+      - name: com.unity.modules.director
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      keywords:
+      - unity
+      - recorder
+      - recording
+      - capture
+      - video
+      - animation
+      - clip
+      - images
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637717102070000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.recorder.git
+        revision: a59deb20019b176e95dd8efa2f9b41b8e4a0bb96
+        path: 
+    - packageId: com.unity.render-pipelines.universal@10.9.0
+      testable: 0
+      isDirectDependency: 1
+      version: 10.9.0
+      source: 1
+      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.render-pipelines.universal@10.9.0
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
       displayName: Universal RP
@@ -790,21 +908,20 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         compatible:
-        - 10.8.1
         - 10.9.0
-        verified: 10.8.1
+        verified: 10.9.0
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.render-pipelines.core
-        version: 10.8.1
+        version: 10.9.0
       - name: com.unity.shadergraph
-        version: 10.8.1
+        version: 10.9.0
       resolvedDependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.render-pipelines.core
-        version: 10.8.1
+        version: 10.9.0
       - name: com.unity.ugui
         version: 1.0.0
       - name: com.unity.modules.ui
@@ -816,7 +933,7 @@ m_PackageAssets:
       - name: com.unity.modules.jsonserialize
         version: 1.0.0
       - name: com.unity.shadergraph
-        version: 10.8.1
+        version: 10.9.0
       - name: com.unity.searcher
         version: 4.3.2
       keywords:
@@ -838,13 +955,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637756825800000000
+      datePublishedTicks: 637853737940000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/Graphics.git
-        revision: 31a193989d1e4e18ec3dced0f45168f8d2552a9a
+        revision: 5a193e907cafca7b2fa290618e18c3f28a3b451b
         path: 
     - packageId: com.unity.test-framework@1.1.31
       testable: 0
@@ -899,10 +1016,12 @@ m_PackageAssets:
         - 1.1.29
         - 1.1.30
         - 1.1.31
+        - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
         compatible:
         - 1.1.31
+        - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
         verified: 1.1.31
@@ -1319,13 +1438,13 @@ m_PackageAssets:
       - Unity UI
       - Canvas
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1367,13 +1486,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1415,13 +1534,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1463,13 +1582,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1511,13 +1630,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1559,13 +1678,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1611,13 +1730,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1667,13 +1786,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1716,13 +1835,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1764,13 +1883,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1812,13 +1931,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1860,13 +1979,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1908,13 +2027,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -1956,13 +2075,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2008,13 +2127,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2056,13 +2175,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2112,13 +2231,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2164,13 +2283,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2212,13 +2331,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2276,13 +2395,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2324,13 +2443,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2380,13 +2499,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2428,13 +2547,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2484,13 +2603,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2540,13 +2659,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2596,13 +2715,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2668,13 +2787,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2720,13 +2839,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2780,13 +2899,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2842,13 +2961,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2890,13 +3009,13 @@ m_PackageAssets:
       resolvedDependencies: []
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -2950,13 +3069,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -3002,13 +3121,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -3061,13 +3180,13 @@ m_PackageAssets:
         version: 1.0.0
       keywords: []
       registry:
-        id: 
+        id: main
         name: 
-        url: 
+        url: https://packages.unity.com
         scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
       hideInEditor: 1
       entitlements:
         isAllowed: 1
@@ -3224,12 +3343,12 @@ m_PackageAssets:
         url: git@github.com:Unity-Technologies/Unity.Mathematics.git
         revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
-    - packageId: com.unity.render-pipelines.core@10.8.1
+    - packageId: com.unity.render-pipelines.core@10.9.0
       testable: 0
       isDirectDependency: 0
-      version: 10.8.1
+      version: 10.9.0
       source: 1
-      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.render-pipelines.core@10.8.1
+      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.render-pipelines.core@10.9.0
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -3347,9 +3466,8 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         compatible:
-        - 10.8.1
         - 10.9.0
-        verified: 10.8.1
+        verified: 10.9.0
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -3381,20 +3499,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637756824220000000
+      datePublishedTicks: 637853736930000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/Graphics.git
-        revision: 31a193989d1e4e18ec3dced0f45168f8d2552a9a
+        revision: 5a193e907cafca7b2fa290618e18c3f28a3b451b
         path: 
-    - packageId: com.unity.shadergraph@10.8.1
+    - packageId: com.unity.shadergraph@10.9.0
       testable: 0
       isDirectDependency: 0
-      version: 10.8.1
+      version: 10.9.0
       source: 1
-      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.shadergraph@10.8.1
+      resolvedPath: C:\Users\yuusu\Desktop\208Studios\StackBallRunner\Library\PackageCache\com.unity.shadergraph@10.9.0
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3509,17 +3627,16 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         compatible:
-        - 10.8.1
         - 10.9.0
-        verified: 10.8.1
+        verified: 10.9.0
       dependencies:
       - name: com.unity.render-pipelines.core
-        version: 10.8.1
+        version: 10.9.0
       - name: com.unity.searcher
         version: 4.3.2
       resolvedDependencies:
       - name: com.unity.render-pipelines.core
-        version: 10.8.1
+        version: 10.9.0
       - name: com.unity.ugui
         version: 1.0.0
       - name: com.unity.modules.ui
@@ -3545,13 +3662,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637756824360000000
+      datePublishedTicks: 637853737050000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/Graphics.git
-        revision: 31a193989d1e4e18ec3dced0f45168f8d2552a9a
+        revision: 5a193e907cafca7b2fa290618e18c3f28a3b451b
         path: 
     - packageId: com.unity.services.core@1.0.1
       testable: 0
@@ -3587,6 +3704,8 @@ m_PackageAssets:
         - 1.1.0-pre.69
         - 1.2.0
         - 1.3.1
+        - 1.3.2
+        - 1.4.0
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3598,7 +3717,9 @@ m_PackageAssets:
         - 1.1.0-pre.69
         - 1.2.0
         - 1.3.1
-        verified: 1.0.1
+        - 1.3.2
+        - 1.4.0
+        verified: 1.3.2
       dependencies:
       - name: com.unity.modules.unitywebrequest
         version: 1.0.0
@@ -3709,4 +3830,4 @@ m_PackageAssets:
   m_LocalPackages:
     m_LocalFileStatus: []
 m_ProjectPath: C:/Users/yuusu/Desktop/208Studios/StackBallRunner/Packages
-m_EditorVersion: 2020.3.32f1 (12f8b0834f07)
+m_EditorVersion: 2020.3.34f1 (9a4c9c70452b)

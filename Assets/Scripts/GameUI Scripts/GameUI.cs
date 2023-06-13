@@ -31,9 +31,11 @@ public class GameUI : MonoBehaviour
 
     private Material playerMat;
     private Player player;
+    private bool isGameStarted;
 
     void Awake()
     {
+        isGameStarted = false;
         playerMat = FindObjectOfType<Player>().transform.GetChild(0).GetComponent<MeshRenderer>().material;
         player = FindObjectOfType<Player>();
 
@@ -55,19 +57,27 @@ public class GameUI : MonoBehaviour
     {
         if(player.playerState == Player.PlayerState.Prepare)
         {
+            inGameUI.SetActive(false);
             if (SoundManager.instance.sound && soundBtn.GetComponent<Image>().sprite != soundOnSpr)
                 soundBtn.GetComponent<Image>().sprite = soundOnSpr;
             else if (!SoundManager.instance.sound && soundBtn.GetComponent<Image>().sprite != soundOffSpr)
                 soundBtn.GetComponent<Image>().sprite = soundOffSpr;
         }
 
-        if(Input.GetMouseButtonDown(0) &&  !IgnoreUI() && player.playerState == Player.PlayerState.Prepare)
+        if (player.playerState == Player.PlayerState.Playing)
         {
-            player.playerState = Player.PlayerState.Playing;
-            homeUI.SetActive(false);
             inGameUI.SetActive(true);
-            finishUI.SetActive(false);
-            gameOverUI.SetActive(false);
+        }
+
+        if(Input.GetMouseButtonDown(0) &&  !IgnoreUI() && player.playerState == Player.PlayerState.Prepare && !isGameStarted)
+        {
+                player.playerState = Player.PlayerState.Prepare;
+                homeUI.SetActive(false);
+                inGameUI.SetActive(false);
+                finishUI.SetActive(false);
+                gameOverUI.SetActive(false);
+                isGameStarted = true;
+
         }
 
         if(player.playerState == Player.PlayerState.Finish)

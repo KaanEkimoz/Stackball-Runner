@@ -22,18 +22,21 @@ public class MoveBallToStackBall : MonoBehaviour
 
     private void Update()
     {
-        if (isStart && ball != null)
+        if (ball != null)
         {
-            ball.transform.position = new Vector3(Mathf.Lerp(ball.transform.position.x, stackBallPos.position.x, 2* Time.deltaTime),
-                Mathf.Lerp(ball.transform.position.y, stackBallPos.position.y, 2* Time.deltaTime), 
-                Mathf.Lerp(ball.transform.position.z, stackBallPos.position.z, 2* Time.deltaTime));
-        }
+            if (isStart)
+            {
+                ball.transform.position = new Vector3(Mathf.Lerp(ball.transform.position.x, stackBallPos.position.x, 2* Time.deltaTime),
+                    Mathf.Lerp(ball.transform.position.y, stackBallPos.position.y, 2* Time.deltaTime), 
+                    Mathf.Lerp(ball.transform.position.z, stackBallPos.position.z, 2* Time.deltaTime));
+            }
 
-        if (ball.transform.position.z > stackBallPos.transform.position.z -0.2f && isStart)
-        {
-            isStart = false;
-            ball.GetComponent<Player>().playerState = Player.PlayerState.Playing;
-            Debug.Log(isStart);
+            if (ball.transform.position.z > stackBallPos?.transform.position.z -0.2f && isStart)
+            {
+                isStart = false;
+                ball.GetComponent<Player>().playerState = Player.PlayerState.Playing;
+            }
         }
+        
     }
 }

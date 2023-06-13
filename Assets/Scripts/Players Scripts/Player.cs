@@ -158,6 +158,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+                Debug.Log("Collision Player");
                 if (target.gameObject.tag == "enemy")
                 {
                     target.transform.parent.GetComponent<StackController>().ShatterAllParts();
@@ -189,6 +190,8 @@ public class Player : MonoBehaviour
         if (target.gameObject.tag == "Platform" && playerState == PlayerState.Playing)
         {
             playerState = PlayerState.Prepare;
+            smash = false;
+            currentTime = 0;
         }
     }
 

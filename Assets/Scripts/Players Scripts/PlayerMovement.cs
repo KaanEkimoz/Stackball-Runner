@@ -1,12 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using UnityEngine.Animations;
-using UnityEngine.InputSystem;
 using Vector2 = UnityEngine.Vector2;
-
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed = 5.0f;
@@ -19,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
         _inputActions = new GameInputActions();
         _player = GameObject.FindObjectOfType<Player>();
     }
-
     private void Update()
     {
         if (_player.playerState == Player.PlayerState.Prepare)
@@ -27,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
             _moveDirection = _inputActions.Player.Move.ReadValue<Vector2>();
             Move();
         }
-        
     }
 
     private void OnEnable()
