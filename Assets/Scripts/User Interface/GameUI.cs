@@ -48,8 +48,8 @@ public class GameUI : MonoBehaviour
 
     private void Start()
     {
-        currentLevelText.text = FindObjectOfType<LevelSpawner>().level.ToString();
-        nextLevelText.text = FindObjectOfType<LevelSpawner>().level + 1 + "";
+        currentLevelText.text = LevelSpawner.level.ToString();
+        nextLevelText.text = LevelSpawner.level + 1 + "";
     }
 
     void Update()
@@ -86,7 +86,7 @@ public class GameUI : MonoBehaviour
             finishUI.SetActive(true);
             gameOverUI.SetActive(false);
 
-            finishLevelText.text = "Level " + FindObjectOfType<LevelSpawner>().level;
+            finishLevelText.text = "Level " +  LevelSpawner.level;
         }
 
         if(player.currentPlayerState == Player.PlayerState.Died)

@@ -53,22 +53,23 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\User Interface\Ignore.cs" />
-     <Compile Include="Assets\Scripts\Level Scripts\Rotator.cs" />
-     <Compile Include="Assets\Scripts\Manager Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Level\Rotator.cs" />
+     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\User Interface\GameUI.cs" />
-     <Compile Include="Assets\Scripts\Players Scripts\MovePlayerToStack.cs" />
-     <Compile Include="Assets\Scripts\Players Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Level Scripts\LevelSpawner.cs" />
+     <Compile Include="Assets\Scripts\Player\MovePlayerToStack.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Stack\StackManager.cs" />
+     <Compile Include="Assets\Scripts\Level\LevelSpawner.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\Scripts\Players Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\NewInputSystem\GameInputActions.cs" />
-     <Compile Include="Assets\Scripts\Stack Scripts\StackController.cs" />
-     <Compile Include="Assets\Scripts\Players Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Stack Scripts\StackPartController.cs" />
-     <Compile Include="Assets\Scripts\Manager Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\User Interface\LevelSlider.cs" />
-     <Compile Include="Assets\Scripts\Stack Scripts\StackManager.cs" />
+     <Compile Include="Assets\Scripts\Stack\StackController.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Stack\StackPartController.cs" />
+     <Compile Include="Assets\Scripts\Managers\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\Level\LevelCreator.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -50,6 +50,16 @@ MonoBehaviour:
   setHeightManual: 0
   finishRotator: 0
   height: 0
+  model: []
+  modelPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  winPrefab: {fileID: 3293644397374515874, guid: de014377afc97fb458185f5869ca0bd9, type: 3}
+  plateMat: {fileID: 2100000, guid: 08ba0d951780d1d4c927e110c9d952d2, type: 2}
+  baseMat: {fileID: 2100000, guid: e3bd4246a16cd5c49968223f6e8f335f, type: 2}
+  playerMesh: {fileID: 0}
 --- !u!1001 &3870446466328163062
 PrefabInstance:
   m_ObjectHideFlags: 0
