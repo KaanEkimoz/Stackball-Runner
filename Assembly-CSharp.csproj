@@ -52,12 +52,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\GameUI Scripts\Ignore.cs" />
+     <Compile Include="Assets\Scripts\User Interface\Ignore.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\Manager Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-     <Compile Include="Assets\Scripts\GameUI Scripts\GameUI.cs" />
-     <Compile Include="Assets\MoveBallToStackBall.cs" />
+     <Compile Include="Assets\Scripts\User Interface\GameUI.cs" />
+     <Compile Include="Assets\Scripts\Players Scripts\MovePlayerToStack.cs" />
      <Compile Include="Assets\Scripts\Players Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\LevelSpawner.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -67,6 +67,8 @@
      <Compile Include="Assets\Scripts\Players Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Stack Scripts\StackPartController.cs" />
      <Compile Include="Assets\Scripts\Manager Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\User Interface\LevelSlider.cs" />
+     <Compile Include="Assets\Scripts\Stack Scripts\StackManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -626,10 +628,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/yuusu/Desktop/208Studios/StackBallRunner/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/yuusu/Desktop/Unity Projects/StackBallRunner/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/yuusu/Desktop/208Studios/StackBallRunner/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/yuusu/Desktop/Unity Projects/StackBallRunner/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

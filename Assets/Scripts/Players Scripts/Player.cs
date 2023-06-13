@@ -1,205 +1,233 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
-
 public class Player : MonoBehaviour
 {
-    private Rigidbody rb;
-    private float currentTime;
-    private bool smash, invincible;
-    private int currentBrokenStacks, totalStacks;
+    public static UnityEvent OnPlayerSmash;
+    
+    private Rigidbody _playerRigidbody;
+    private float invincibleTimer;
+    private bool isSmashing;
+    private bool isInvincible;
+    
 
-    public GameObject invicnbleObj;
+    public GameObject invincibleObject;
     public Image invincibleFill;
-    public GameObject fireEffect, winEffect, splashEffect;
+    public GameObject fireEffect;
+    public GameObject winEffect;
+    public GameObject splashEffect;
+
     public enum PlayerState
     {
+        Running,
         Prepare,
         Playing,
         Died,
         Finish
     }
 
-    //[HideInInspector]
-    public PlayerState playerState = PlayerState.Prepare;
+    [HideInInspector] public PlayerState currentPlayerState = PlayerState.Running;
 
-    public AudioClip bounceOffClip, deadClip, winClip, destoryClip, iDestroyClip;
+    public AudioClip bounceOffClip;
+    public AudioClip deadClip;
+    public AudioClip winClip;
+    public AudioClip destroyClip;
+    
 
-    void Awake()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        currentBrokenStacks = 0;
+        _playerRigidbody = GetComponent<Rigidbody>();
+        currentPlayerState = PlayerState.Running;
     }
-
-    void Start()
+    private void Update()
     {
-        totalStacks = FindObjectsOfType<StackController>().Length;
-    }
-
-    void Update()
-    {
-        if (playerState == PlayerState.Playing)
+        if (currentPlayerState == PlayerState.Playing)
         {
-            if (Input.GetMouseButtonDown(0))
-                smash = true;
+            HandleInputs();
 
-            if (Input.GetMouseButtonUp(0))
-                smash = false;
-
-            if (invincible)
-            {
-                currentTime -= Time.deltaTime * .35f;
-                if (!fireEffect.activeInHierarchy)
-                    fireEffect.SetActive(true);
-            }
+            if (isInvincible)
+                UpdateInvincibleState();
             else
-            {
-                if (fireEffect.activeInHierarchy)
-                    fireEffect.SetActive(false);
+                UpdateNormalState();
 
-                if (smash)
-                    currentTime += Time.deltaTime * .8f;
-                else
-                    currentTime -= Time.deltaTime * .5f;
-            }
-
-            if (currentTime >= 0.3f || invincibleFill.color == Color.red)
-                invicnbleObj.SetActive(true);
-            else
-                invicnbleObj.SetActive(false);
-
-            if (currentTime >= 1)
-            {
-                currentTime = 1;
-                invincible = true;
-                invincibleFill.color = Color.red;
-            }
-            else if (currentTime <= 0)
-            {
-                currentTime = 0;
-                invincible = false;
-                invincibleFill.color = Color.white;
-            }
-
-            if (invicnbleObj.activeInHierarchy)
-                invincibleFill.fillAmount = currentTime / 1;
-
+            UpdateInvincibleObject();
         }
 
-        if (playerState == PlayerState.Finish)
+        if (currentPlayerState == PlayerState.Finish)
         {
-            if (Input.GetMouseButtonDown(0))
-                FindObjectOfType<LevelSpawner>().NextLevel();
+            HandleFinishState();
         }
-
-
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        if(playerState == PlayerState.Playing)
+        if (currentPlayerState == PlayerState.Playing)
         {
-            if (Input.GetMouseButton(0))
-            {
-                smash = true;
-                rb.velocity = new Vector3(0, -100 * Time.fixedDeltaTime * 7, 0);
-            }
+            HandleSmashing();
+            LimitVerticalVelocity();
         }
+    }
+
+    private void HandleInputs()
+    {
+        if (Input.GetMouseButtonDown(0))
+            isSmashing = true;
+
+        if (Input.GetMouseButtonUp(0))
+            isSmashing = false;
+    }
+
+    private void UpdateInvincibleState()
+    {
+        DecreaseInvincibleTimer();
+        ActiveFireEffect();
         
 
-        if (rb.velocity.y > 5)
-            rb.velocity = new Vector3(rb.velocity.x, 5, rb.velocity.z);
-    }
-
-    public void IncreaseBrokenStacks()
-    {
-        currentBrokenStacks++;
-
-        if (!invincible)
+        if (invincibleTimer < 0)
         {
-            ScoreManager.instance.AddScore(1);
-            SoundManager.instance.PlaySoundFX(destoryClip, 0.5f);
-        }
-        else
-        {
-            ScoreManager.instance.AddScore(2);
-            SoundManager.instance.PlaySoundFX(iDestroyClip, 0.5f);
+            invincibleTimer = 0;
+            isInvincible = false;
+            invincibleFill.color = Color.white;
         }
     }
 
-    void OnCollisionEnter(Collision target)
+    private void ActiveFireEffect()
     {
-        if (!smash)
-        {
-            rb.velocity = new Vector3(0, 50 * Time.deltaTime * 5, 0);
+        if (!fireEffect.activeInHierarchy)
+            fireEffect.SetActive(true);
+    }
+    private void DecreaseInvincibleTimer()
+    {
+        invincibleTimer -= Time.deltaTime * .35f;
+    }
 
-            if(target.gameObject.tag != "Finish")
-            {
-                GameObject splash = Instantiate(splashEffect);
-                splash.transform.SetParent(target.transform);
-                splash.transform.localEulerAngles = new Vector3(90, Random.Range(0, 359), 0);
-                float randomScale = Random.Range(0.18f, 0.25f);
-                splash.transform.localScale = new Vector3(randomScale, randomScale, 1);
-                splash.transform.position = new Vector3(transform.position.x, transform.position.y - 0.22f, transform.position.z);
-                splash.GetComponent<SpriteRenderer>().color = transform.GetChild(0).GetComponent<MeshRenderer>().material.color;
-            }
+    private void UpdateNormalState()
+    {
+        if (fireEffect.activeInHierarchy)
+            fireEffect.SetActive(false);
 
-            SoundManager.instance.PlaySoundFX(bounceOffClip, 0.5f);
-        }
+        if (isSmashing)
+            invincibleTimer += Time.deltaTime * .8f;
         else
-        {
-            if (invincible)
-            {
-                if (target.gameObject.tag == "enemy" || target.gameObject.tag == "plane")
-                {
-                    target.transform.parent.GetComponent<StackController>().ShatterAllParts();
-                }
-            }
-            else
-            {
-                Debug.Log("Collision Player");
-                if (target.gameObject.tag == "enemy")
-                {
-                    target.transform.parent.GetComponent<StackController>().ShatterAllParts();
-                }
+            invincibleTimer -= Time.deltaTime * .5f;
 
-                if (target.gameObject.tag == "plane")
-                {
-                    rb.isKinematic = true;
-                    transform.GetChild(0).gameObject.SetActive(false);
-                    playerState = PlayerState.Died;
-                    SoundManager.instance.PlaySoundFX(deadClip, 0.5f);
-                }
-            }
+        
+        if (invincibleTimer >= 1)
+        {
+            invincibleTimer = 1;
+            isInvincible = true;
+            invincibleFill.color = Color.red;
+        }
+    }
+
+    private void UpdateInvincibleObject()
+    {
+        invincibleObject.SetActive(invincibleTimer >= 0.3f || invincibleFill.color == Color.red);
+        invincibleFill.fillAmount = invincibleTimer / 1;
+    }
+
+    private void HandleFinishState()
+    {
+        if (Input.GetMouseButtonDown(0))
+            FindObjectOfType<LevelSpawner>().NextLevel();
+    }
+
+    private void HandleSmashing()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            isSmashing = true;
+            _playerRigidbody.velocity = new Vector3(0, -100 * Time.fixedDeltaTime * 7, 0);
+        }
+    }
+
+    private void LimitVerticalVelocity()
+    {
+        Vector3 playerVelocity = _playerRigidbody.velocity;
+        
+        if (playerVelocity.y > 5)
+            _playerRigidbody.velocity = new Vector3(playerVelocity.x, 5, playerVelocity.z);
+    }
+    
+
+    private void OnCollisionEnter(Collision target)
+    {
+        if (!isSmashing)
+            HandleBounce(target);
+        else
+            HandleSmash(target);
+
+        OnPlayerSmash?.Invoke();
+
+        if (target.gameObject.CompareTag("Finish") && currentPlayerState == PlayerState.Playing)
+        {
+            currentPlayerState = PlayerState.Finish;
             
+            PlayWinEffectAndSound();
         }
 
-        FindObjectOfType<GameUI>().LevelSliderFill(currentBrokenStacks / (float)totalStacks);
-
-        if(target.gameObject.tag == "Finish" && playerState == PlayerState.Playing)
+        if (target.gameObject.CompareTag("Platform") && currentPlayerState == PlayerState.Playing)
         {
-            playerState = PlayerState.Finish;
-            SoundManager.instance.PlaySoundFX(winClip, 0.7f);
-            GameObject win = Instantiate(winEffect);
-            win.transform.SetParent(Camera.main.transform);
-            win.transform.localPosition = Vector3.up * 1.5f;
-            win.transform.eulerAngles = Vector3.zero;
-        }
-
-        if (target.gameObject.tag == "Platform" && playerState == PlayerState.Playing)
-        {
-            playerState = PlayerState.Prepare;
-            smash = false;
-            currentTime = 0;
+            currentPlayerState = PlayerState.Running;
+            isSmashing = false;
+            invincibleTimer = 0;
         }
     }
 
-    void OnCollisionStay(Collision target)
+    private void PlayWinEffectAndSound()
     {
-        if (!smash || target.gameObject.tag == "Finish")
+        SoundManager.instance.PlaySoundFX(winClip, 0.7f);
+        
+        GameObject win = Instantiate(winEffect, Camera.main.transform, true);
+        win.transform.localPosition = Vector3.up * 1.5f;
+        win.transform.eulerAngles = Vector3.zero;
+    }
+
+    private void HandleBounce(Collision target)
+    {
+        _playerRigidbody.velocity = new Vector3(0, 50 * Time.deltaTime * 5, 0);
+
+        if (target.gameObject.CompareTag("Finish"))
         {
-            rb.velocity = new Vector3(0, 50 * Time.deltaTime * 5, 0);
+            return;
+        }
+
+        GameObject splash = Instantiate(splashEffect);
+        splash.transform.SetParent(target.transform);
+        splash.transform.localEulerAngles = new Vector3(90, Random.Range(0, 359), 0);
+        float randomScale = Random.Range(0.18f, 0.25f);
+        splash.transform.localScale = new Vector3(randomScale, randomScale, 1);
+        splash.transform.position = new Vector3(transform.position.x, transform.position.y - 0.22f, transform.position.z);
+        splash.GetComponent<SpriteRenderer>().color = transform.GetChild(0).GetComponent<MeshRenderer>().material.color;
+
+        SoundManager.instance.PlaySoundFX(bounceOffClip, 0.5f);
+    }
+
+    private void HandleSmash(Collision target)
+    {
+        if (isInvincible)
+        {
+            if (target.gameObject.CompareTag("enemy") || target.gameObject.CompareTag("plane"))
+                target.transform.parent.GetComponent<StackController>().ShatterAllParts();
+        }
+        else
+        {
+            if (target.gameObject.CompareTag("enemy"))
+                target.transform.parent.GetComponent<StackController>().ShatterAllParts();
+
+            if (target.gameObject.CompareTag("plane"))
+            {
+                _playerRigidbody.isKinematic = true;
+                transform.GetChild(0).gameObject.SetActive(false);
+                
+                currentPlayerState = PlayerState.Died;
+                SoundManager.instance.PlaySoundFX(deadClip, 0.5f);
+            }
         }
     }
+    /*private void OnCollisionStay(Collision target)
+    {
+        if (!isSmashing || target.gameObject.CompareTag("Finish"))
+            _playerRigidbody.velocity = new Vector3(0, 50 * Time.deltaTime * 5, 0);
+    }*/
 }

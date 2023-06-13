@@ -14,13 +14,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (_player.playerState == Player.PlayerState.Prepare)
+        if (_player.currentPlayerState == Player.PlayerState.Running && Input.GetMouseButton(0))
         {
-            _moveDirection = _inputActions.Player.Move.ReadValue<Vector2>();
+            //_moveDirection = _inputActions.Player.Move.ReadValue<Vector2>();
             Move();
         }
     }
-
     private void OnEnable()
     {
         _inputActions.Player.Move.Enable();
@@ -33,6 +32,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(transform.forward * Time.deltaTime * playerSpeed * _moveDirection.y);
+        transform.Translate(transform.forward * (Time.deltaTime * playerSpeed));
     }
 }

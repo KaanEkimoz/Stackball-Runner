@@ -1,31 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
-
 public class StackController : MonoBehaviour
 {
-    [SerializeField]
-    private StackPartController[] stackPartControlls = null;
+    public AudioClip stackDestroyClip;
+    [SerializeField] private StackPartController[] stackPartControls = null;
+
+    private void Start()
+    {
+        stackPartControls = GetComponentsInChildren<StackPartController>();
+    }
 
     public void ShatterAllParts()
     {
         if(transform.parent != null)
         {
             transform.parent = null;
-            FindObjectOfType<Player>().IncreaseBrokenStacks();
+            StackManager.CurrentBrokenStacks++;
+            SoundManager.instance.PlaySoundFX(stackDestroyClip, 0.5f);
+            ScoreManager.instance.AddScore(2);
         }
 
-        foreach (StackPartController o in stackPartControlls)
+        foreach (StackPartController stackPart in stackPartControls)
         {
-            o.Shatter();
+            stackPart.Shatter();
         }
         StartCoroutine(RemoveParts());
 
     }
-
-    IEnumerator RemoveParts()
+    private IEnumerator RemoveParts()
     {
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
+    
 }
