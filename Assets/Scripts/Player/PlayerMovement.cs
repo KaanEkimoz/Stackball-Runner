@@ -14,11 +14,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (_player.currentPlayerState == Player.PlayerState.Running && Input.GetMouseButton(0))
-        {
-            //_moveDirection = _inputActions.Player.Move.ReadValue<Vector2>();
+        if (_player.currentPlayerState == Player.PlayerState.Running && (Input.GetMouseButton(0) || Input.touchCount > 0))
             Move();
-        }
     }
     private void OnEnable()
     {
