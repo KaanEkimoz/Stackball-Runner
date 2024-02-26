@@ -46,10 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Stack\StackManager.cs" />
+    <Compile Include="Assets\Materials\OnButtonPress.cs" />
+    <Compile Include="Assets\Ads\BannerAd.cs" />
     <Compile Include="Assets\Scripts\Stack\StackPartController.cs" />
+    <Compile Include="Assets\Ads\AdsInitializer.cs" />
     <Compile Include="Assets\Scripts\User Interface\GameUI.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\User Interface\LevelSlider.cs" />
+    <Compile Include="Assets\Ads\InterstitialAd.cs" />
     <Compile Include="Assets\Scripts\Level\LevelCreator.cs" />
     <Compile Include="Assets\Scripts\User Interface\Ignore.cs" />
     <Compile Include="Assets\Scripts\Stack\StackController.cs" />
@@ -84,12 +88,14 @@
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\license.txt" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationExceptions.json" />
+    <None Include="Library\PackageCache\com.unity.ads@4.4.2\LICENSE.txt" />
     <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.8\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.8\Editor Resources\Shaders\TMP_Properties.cginc" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.8\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
+    <None Include="Library\PackageCache\com.unity.ads@4.4.2\package.json" />
     <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.8\PackageConversionData_Assets.json" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
@@ -776,6 +782,10 @@
       <Project>{c98384ae-5ada-43b7-20d1-008ef15996c9}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{2e8f444f-d985-4072-4e2f-55354d707f56}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{9b3b981a-0c30-70fe-9b02-ea644abea20a}</Project>
       <Name>Unity.Timeline.Editor</Name>
@@ -787,6 +797,10 @@
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{f078294f-bfff-47dd-a109-5b52d0da1e82}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
+      <Project>{2f99fad1-af49-893f-431d-135441f43459}</Project>
+      <Name>UnityEngine.Advertisements.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{f9d574e2-5456-49e1-ba1b-400f51bdddee}</Project>

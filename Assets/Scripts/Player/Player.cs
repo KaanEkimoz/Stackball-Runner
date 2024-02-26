@@ -3,13 +3,15 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
-    
     public static UnityEvent OnPlayerSmash;
     
     private Rigidbody _playerRigidbody;
     private float invincibleTimer;
     private bool isSmashing;
     private bool isInvincible;
+    public static bool isInputActive;
+
+    public UnityEvent onPlayerDie;
     
 
     public GameObject invincibleObject;
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
     {
         _playerRigidbody = GetComponent<Rigidbody>();
         currentPlayerState = PlayerState.Running;
+        isInputActive = true;
     }
     private void Update()
     {
@@ -71,6 +74,9 @@ public class Player : MonoBehaviour
 
     private void HandleInputs()
     {
+        if(!isInputActive)
+            return;
+        
         if (Input.GetMouseButtonDown(0))
             isSmashing = true;
 
@@ -92,10 +98,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    public static void SetInput(bool b)
+    {
+        isInputActive = b;
+    }
     private void ActiveFireEffect()
     {
         if (!fireEffect.activeInHierarchy)
             fireEffect.SetActive(true);
+    }
+
+    private void DeActiveFireEffect()
+    {
+        fireEffect.SetActive(false);
     }
     private void DecreaseInvincibleTimer()
     {
@@ -124,6 +139,11 @@ public class Player : MonoBehaviour
     private void UpdateInvincibleObject()
     {
         invincibleObject.SetActive(invincibleTimer >= 0.3f || invincibleFill.color == Color.red);
+        invincibleFill.fillAmount = invincibleTimer / 1;
+    }
+    private void UpdateInvincibleObject(bool _activity)
+    {
+        invincibleObject.SetActive(_activity);
         invincibleFill.fillAmount = invincibleTimer / 1;
     }
 
@@ -170,7 +190,11 @@ public class Player : MonoBehaviour
         {
             currentPlayerState = PlayerState.Running;
             isSmashing = false;
+            isInvincible = false;
             invincibleTimer = 0;
+            UpdateInvincibleObject(false);
+            DeActiveFireEffect();
+            invincibleFill.color = Color.white;
         }
     }
 
@@ -199,6 +223,7 @@ public class Player : MonoBehaviour
                 
             currentPlayerState = PlayerState.Died;
             SoundManager.instance.PlaySoundFX(deadClip, 0.5f);
+            onPlayerDie?.Invoke();
         }
 
         GameObject splash = Instantiate(splashEffect);
@@ -234,9 +259,4 @@ public class Player : MonoBehaviour
             }
         }
     }
-    /*private void OnCollisionStay(Collision target)
-    {
-        if (!isSmashing || target.gameObject.CompareTag("Finish"))
-            _playerRigidbody.velocity = new Vector3(0, 50 * Time.deltaTime * 5, 0);
-    }*/
 }

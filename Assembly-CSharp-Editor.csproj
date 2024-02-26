@@ -885,6 +885,10 @@
       <Project>{c98384ae-5ada-43b7-20d1-008ef15996c9}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{2e8f444f-d985-4072-4e2f-55354d707f56}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{9b3b981a-0c30-70fe-9b02-ea644abea20a}</Project>
       <Name>Unity.Timeline.Editor</Name>
@@ -896,6 +900,10 @@
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{f078294f-bfff-47dd-a109-5b52d0da1e82}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
+      <Project>{2f99fad1-af49-893f-431d-135441f43459}</Project>
+      <Name>UnityEngine.Advertisements.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{f9d574e2-5456-49e1-ba1b-400f51bdddee}</Project>

@@ -1,16 +1,20 @@
 using UnityEngine;
 public class LevelSlider : MonoBehaviour
-{
+{ 
+    [SerializeField] private GameUI gameUI;
     private void OnEnable()
     {
-       Player.OnPlayerSmash.AddListener(FillSlider);
+        if(Player.OnPlayerSmash != null)
+            Player.OnPlayerSmash.AddListener(FillSlider);
+       
     }
     private void OnDisable()
     {
-        Player.OnPlayerSmash.RemoveListener(FillSlider);
+        if(Player.OnPlayerSmash != null)
+            Player.OnPlayerSmash.RemoveListener(FillSlider);
     }
     private void FillSlider()
     {
-        FindObjectOfType<GameUI>().LevelSliderFill(StackManager.CurrentBrokenStacks / (float) StackManager.TotalStacks);
+        gameUI.LevelSliderFill(StackManager.CurrentBrokenStacks / (float) StackManager.TotalStacks);
     }
 }

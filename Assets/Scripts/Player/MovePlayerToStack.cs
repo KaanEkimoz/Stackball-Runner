@@ -1,7 +1,7 @@
 using UnityEngine;
-namespace Players_Scripts
-{
-    public class MovePlayerToStack : MonoBehaviour
+using UnityEngine.Experimental.GlobalIllumination;
+
+public class MovePlayerToStack : MonoBehaviour
     {
         [SerializeField] private float returnSpeed = 2.0f;
         [SerializeField] private Transform playerStopTransform;
@@ -19,6 +19,7 @@ namespace Players_Scripts
             if (other.CompareTag("Player"))
             {
                 _hasStartedToMove = true;
+                Player.isInputActive = false;
                 _player = other.gameObject;
             }
         }
@@ -30,14 +31,17 @@ namespace Players_Scripts
                 var playerPos = _player.transform.position;
                 var playerStopPos = playerStopTransform.position;
 
+                
                 if (_hasStartedToMove)
                 {
+                    
                     playerPos = Vector3.Lerp(playerPos, playerStopPos, returnSpeed * Time.deltaTime);
                     _player.transform.position = playerPos;
                     if (IsPlayerReached())
                     {
                         _player.GetComponent<Player>().currentPlayerState = Player.PlayerState.Playing;
                         _hasStartedToMove = false;
+                        Player.isInputActive = true;
                     }
                 }
             }
@@ -48,4 +52,3 @@ namespace Players_Scripts
             return _player.transform.position.z > playerStopTransform.position.z - 0.2f;
         }
     }
-}

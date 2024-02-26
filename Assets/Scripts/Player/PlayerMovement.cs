@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(transform.forward * (Time.deltaTime * playerSpeed));
+        if(Player.isInputActive)
+            transform.Translate(transform.forward * (Time.deltaTime * playerSpeed));
     }
 }
