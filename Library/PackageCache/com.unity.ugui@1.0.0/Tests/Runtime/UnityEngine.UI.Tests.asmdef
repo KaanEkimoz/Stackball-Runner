@@ -31,6 +31,11 @@
             "name": "com.unity.modules.animation",
             "expression": "1.0.0",
             "define": "PACKAGE_ANIMATION"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.7.0",
+            "define": "PACKAGE_INPUTSYSTEM"
         }
     ],
     "noEngineReferences": false

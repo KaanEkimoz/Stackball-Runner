@@ -4,7 +4,6 @@ public class StackPartController : MonoBehaviour
 
     private Rigidbody rigidBody;
     private MeshRenderer meshRender;
-    
     private Collider collider;
 
     void Awake()

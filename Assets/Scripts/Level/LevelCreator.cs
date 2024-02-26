@@ -1,12 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 public class LevelCreator : MonoBehaviour
 {
     [SerializeField] private Transform platformSpawnTransform;
     private Vector3 _nextPlatformSpawnPos;
     [SerializeField] private GameObject platformPartPrefab;
     [SerializeField] private float distanceBetweenPlatforms = 2.08f;
-    [SerializeField] private GameObject[] trapPrefabs;
+    [SerializeField] private List<GameObject> trapPrefabs;
     [SerializeField] private GameObject rotatorPrefab;
+    [SerializeField] private float luckPercentage = 5f;
     
     GameObject platform = null;
     GameObject rotator = null;
@@ -20,13 +23,23 @@ public class LevelCreator : MonoBehaviour
     }
     private void CreatePlatform(Vector3 spawnPosition)
     {
-        int platformCount = Random.Range(7, 15) + (LevelSpawner.level / 15);
-        
+        int platformCount = Random.Range(8, 15) + (LevelSpawner.level / 15);
+
         for (float i = 0; i < platformCount; i++)
         {
             Vector3 pos = new Vector3(spawnPosition.x,spawnPosition.y,spawnPosition.z + (i * distanceBetweenPlatforms));
             platform = Instantiate(platformPartPrefab, pos, Quaternion.identity);
+            
+            float randomNumber = Random.Range(0f, 100f);
+            if ((i >= 3) && (i <= (platformCount-2)) && randomNumber <= luckPercentage)
+            {
+                Vector3 spawnPos = new Vector3(pos.x, pos.y + 2f, pos.z);
+                int randomTrap = (int)Random.Range(0, trapPrefabs.Count);
+                Instantiate(trapPrefabs[randomTrap], spawnPos, Quaternion.identity);
+            }
         }
+        
+        
     }
 
     private void CreateRotator(Vector3 spawnPosition, bool isFinishRotator)

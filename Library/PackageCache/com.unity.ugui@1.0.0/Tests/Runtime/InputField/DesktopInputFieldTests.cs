@@ -48,8 +48,9 @@ namespace InputfieldTests
 #endif
         }
 
-        [Test]
-        public void FocusOnPointerClickWithLeftButton()
+        [UnityTest]
+        [UnityPlatform(exclude = new[] { RuntimePlatform.Switch })] // Currently InputField.ActivateInputFieldInternal calls Switch SoftwareKeyboard screen ; without user input or a command to close the SoftwareKeyboard this blocks the tests suite
+        public IEnumerator FocusOnPointerClickWithLeftButton()
         {
             InputField inputField = m_PrefabRoot.GetComponentInChildren<InputField>();
             PointerEventData data = new PointerEventData(m_PrefabRoot.GetComponentInChildren<EventSystem>());
@@ -59,7 +60,39 @@ namespace InputfieldTests
             MethodInfo lateUpdate = typeof(InputField).GetMethod("LateUpdate", BindingFlags.NonPublic | BindingFlags.Instance);
             lateUpdate.Invoke(inputField, null);
 
+#if UNITY_GAMECORE && !UNITY_EDITOR
+            if (TouchScreenKeyboard.isSupported)
+            {
+                // On Xbox, the onScreenKeyboard is going to constrain the application and make it go out of focus. 
+                // We need to wait for the application to go out of focus before we can close the onScreenKeyboard.
+                while (Application.isFocused)
+                {
+                    yield return null;
+                }
+            }
+#endif
+
             Assert.IsTrue(inputField.isFocused);
+
+#if UNITY_GAMECORE && !UNITY_EDITOR
+            // On Xbox, we then need to close onScreenKeyboard and wait for the application to be focused again.
+            // If this is not done, it could have an impact on subsequent tests that require the application to be focused in order to function correctly.
+            if (!TouchScreenKeyboard.isSupported || !TouchScreenKeyboard.visible)
+            {
+                yield break;
+            }
+
+            while (!Application.isFocused)
+            {
+                if (inputField.touchScreenKeyboard != null)
+                {
+                    inputField.touchScreenKeyboard.active = false;
+                }
+                yield return null;
+            }
+#else
+            yield break;
+#endif
         }
 
         [UnityTest]

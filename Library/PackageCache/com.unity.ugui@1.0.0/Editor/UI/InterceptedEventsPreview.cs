@@ -52,7 +52,7 @@ namespace UnityEditor.Events
         private Dictionary<GameObject, List<ComponentInterceptedEvents>> m_TargetEvents;
         private bool m_InterceptsAnyEvent = false;
         private GUIContent m_Title;
-        private Styles m_Styles = new Styles();
+        private Styles m_Styles;
 
         public override void Initialize(UnityEngine.Object[] targets)
         {

@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
+    
     public static UnityEvent OnPlayerSmash;
     
     private Rigidbody _playerRigidbody;
@@ -162,7 +163,6 @@ public class Player : MonoBehaviour
         if (target.gameObject.CompareTag("Finish") && currentPlayerState == PlayerState.Playing)
         {
             currentPlayerState = PlayerState.Finish;
-            
             PlayWinEffectAndSound();
         }
 
@@ -190,6 +190,15 @@ public class Player : MonoBehaviour
         if (target.gameObject.CompareTag("Finish"))
         {
             return;
+        }
+
+        if (target.gameObject.CompareTag("Trap"))
+        {
+            _playerRigidbody.isKinematic = true;
+            transform.GetChild(0).gameObject.SetActive(false);
+                
+            currentPlayerState = PlayerState.Died;
+            SoundManager.instance.PlaySoundFX(deadClip, 0.5f);
         }
 
         GameObject splash = Instantiate(splashEffect);

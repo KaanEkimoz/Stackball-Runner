@@ -24,6 +24,8 @@ namespace UnityEngine.EventSystems
 
         private PointerEventData m_InputPointerEvent;
 
+        private const float doubleClickTime = 0.3f;
+
         protected StandaloneInputModule()
         {
         }
@@ -70,6 +72,7 @@ namespace UnityEngine.EventSystems
 
         [SerializeField]
         [FormerlySerializedAs("m_AllowActivationOnMobileDevice")]
+        [HideInInspector]
         private bool m_ForceModuleActive;
 
         [Obsolete("allowActivationOnMobileDevice has been deprecated. Use forceModuleActive instead (UnityUpgradable) -> forceModuleActive")]
@@ -85,6 +88,8 @@ namespace UnityEngine.EventSystems
         /// <remarks>
         /// If there is no module active with higher priority (ordered in the inspector) this module will be forced active even if valid enabling conditions are not met.
         /// </remarks>
+
+        [Obsolete("forceModuleActive has been deprecated. There is no need to force the module awake as StandaloneInputModule works for all platforms")]
         public bool forceModuleActive
         {
             get { return m_ForceModuleActive; }
@@ -213,11 +218,6 @@ namespace UnityEngine.EventSystems
             }
 
             m_InputPointerEvent = pointerEvent;
-        }
-
-        public override bool IsModuleSupported()
-        {
-            return m_ForceModuleActive || input.mousePresent || input.touchSupported;
         }
 
         public override bool ShouldActivateModule()
@@ -349,6 +349,12 @@ namespace UnityEngine.EventSystems
                     pointerEvent.pointerEnter = currentOverGo;
                 }
 
+                var resetDiffTime = Time.unscaledTime - pointerEvent.clickTime;
+                if (resetDiffTime >= doubleClickTime)
+                {
+                    pointerEvent.clickCount = 0;
+                }
+
                 // search for the control that will receive the press
                 // if we can't find a press handler set the press
                 // handler to be what would receive a click.
@@ -367,7 +373,7 @@ namespace UnityEngine.EventSystems
                 if (newPressed == pointerEvent.lastPress)
                 {
                     var diffTime = time - pointerEvent.clickTime;
-                    if (diffTime < 0.3f)
+                    if (diffTime < doubleClickTime)
                         ++pointerEvent.clickCount;
                     else
                         pointerEvent.clickCount = 1;
@@ -592,6 +598,12 @@ namespace UnityEngine.EventSystems
 
                 DeselectIfSelectionChanged(currentOverGo, pointerEvent);
 
+                var resetDiffTime = Time.unscaledTime - pointerEvent.clickTime;
+                if (resetDiffTime >= doubleClickTime)
+                {
+                    pointerEvent.clickCount = 0;
+                }
+
                 // search for the control that will receive the press
                 // if we can't find a press handler set the press
                 // handler to be what would receive a click.
@@ -609,7 +621,7 @@ namespace UnityEngine.EventSystems
                 if (newPressed == pointerEvent.lastPress)
                 {
                     var diffTime = time - pointerEvent.clickTime;
-                    if (diffTime < 0.3f)
+                    if (diffTime < doubleClickTime)
                         ++pointerEvent.clickCount;
                     else
                         pointerEvent.clickCount = 1;

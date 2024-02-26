@@ -22,16 +22,13 @@ namespace UnityEditor.Events
 
             public Styles()
             {
-                Color fontColor = new Color(0.7f, 0.7f, 0.7f);
                 labelStyle.padding.right += 4;
-                labelStyle.normal.textColor = fontColor;
                 headerStyle.padding.right += 4;
-                headerStyle.normal.textColor = fontColor;
             }
         }
 
         private GUIContent m_Title;
-        private Styles m_Styles = new Styles();
+        private Styles m_Styles;
 
         public override void Initialize(UnityEngine.Object[] targets)
         {

@@ -3,7 +3,7 @@ public class LevelSlider : MonoBehaviour
 {
     private void OnEnable()
     {
-       // Player.OnPlayerSmash.AddListener(FillSlider);
+       Player.OnPlayerSmash.AddListener(FillSlider);
     }
     private void OnDisable()
     {
