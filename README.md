@@ -1,7 +1,7 @@
-# Stack Ball Run
-208 Studios Hyper-casual Stack Ball Run Project
+# Stackball Runner
+Hyper-casual Stackball Runner Project
 
-Two Mechanics: Classic Runner with Obstacles and Classic Stack Ball Game
+I combined two Mechanics: Classic Runner with Obstacles and Classic Stack Ball Game
 
-https://user-images.githubusercontent.com/79421047/170833675-b8fe0237-7537-405e-8911-9a0864a87ae2.mp4
+https://github.com/KaanEkimoz/StackBallRun-HyperCasual/assets/79421047/9eb543b0-8f9a-4695-b9d5-09109ed298b8
 
